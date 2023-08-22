@@ -37,7 +37,7 @@ public class War {
         int randomVikingIndex = (int) Math.floor(Math.random() * this.listV.size());
         Vikings randomViking = this.listV.get(randomVikingIndex);
 
-        int result = randomSaxon.receiveDamage(randomViking.attack());
+        int result = randomSaxon.receiveDamage(randomViking.attack(0));
 
         if (randomSaxon.getHealth() <= 0) {
             this.listS.remove(randomSaxonIndex);
@@ -54,7 +54,7 @@ public class War {
         int randomVikingIndex = (int) Math.floor(Math.random() * this.listV.size());
         Vikings randomViking = this.listV.get(randomVikingIndex);
 
-        int result = randomViking.receiveDamage(randomSaxon.attack());
+        int result = randomViking.receiveDamage(randomSaxon.attack(0));
 
         if (randomViking.getHealth() <= 0) {
             this.msg= listV.get(randomVikingIndex).getName() + "has died in act of combat";
@@ -66,3 +66,5 @@ public class War {
     }
 
 }
+
+

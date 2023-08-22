@@ -31,7 +31,7 @@ class WarTest {
 
     @Test
     public void should_assign_an_empty_array_to_the_saxonArmy_property() {
-        List<Object> saxonArmy = war.getSaxonArmy();
+        List<Saxon> saxonArmy = war.getSaxonArmy();
         assertTrue(saxonArmy.isEmpty());
     }
 
@@ -76,7 +76,7 @@ class WarTest {
         war.addSaxon(saxon);
         war.addViking(viking);
         saxon.setHealth(150);
-        String response = war.vikingAttack();
+        var response = war.vikingAttack();
         assertEquals("A Saxon has died in combat", response);
     }
 
@@ -114,5 +114,5 @@ class WarTest {
         war.addViking(viking);
         String response = war.saxonAttack();
         assertEquals(viking.getName() + "has received" + saxon.getStrength() + "points of damage", response);
-//    }
+    }
 }

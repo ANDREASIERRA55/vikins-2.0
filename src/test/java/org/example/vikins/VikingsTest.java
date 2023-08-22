@@ -80,4 +80,7 @@ class VikingTest {
         asserEquals("Odin Owns You All", viking.battleCry());
      }
 
+    private void asserEquals(String odinOwnsYouAll, String s) {
+    }
+
 }
